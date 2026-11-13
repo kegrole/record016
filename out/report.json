@@ -1,0 +1,45 @@
+{
+  "findings": [
+    {
+      "kind": "sensitive_file",
+      "path": ".env",
+      "layer_index": 0,
+      "layer_digest": "sha256:ffb76d00e998bd7bab243a3aa8b12535063e188b7dbc5f7bb4c9d6df3dd4cca1",
+      "mode": "0644",
+      "detail": "filename matches sensitive rule '.env'; content contains sensitive keyword 'password'; world-readable (mode 0644)"
+    },
+    {
+      "kind": "sensitive_file",
+      "path": "id_rsa",
+      "layer_index": 0,
+      "layer_digest": "sha256:ffb76d00e998bd7bab243a3aa8b12535063e188b7dbc5f7bb4c9d6df3dd4cca1",
+      "mode": "0644",
+      "detail": "filename matches sensitive rule 'id_rsa'; world-readable (mode 0644)"
+    },
+    {
+      "kind": "whiteout_deleted",
+      "path": ".env",
+      "layer_index": 1,
+      "layer_digest": "sha256:3e2842e042fc8c85d8419c212ea397e79882bcbb2ac122881c2ddf4e2f45cdbf",
+      "mode": null,
+      "detail": "deleted by whiteout '.wh..env' in layer 1; still recoverable from layer 0 (blob sha256:ffb76d00e998bd7bab243a3aa8b12535063e188b7dbc5f7bb4c9d6df3dd4cca1)"
+    },
+    {
+      "kind": "root_user",
+      "path": null,
+      "layer_index": null,
+      "layer_digest": null,
+      "mode": null,
+      "detail": "image config User is empty; container runs as root"
+    }
+  ],
+  "final_files": [
+    "app.py",
+    "id_rsa"
+  ],
+  "summary": {
+    "layers": 2,
+    "final_files": 2,
+    "findings": 4
+  }
+}

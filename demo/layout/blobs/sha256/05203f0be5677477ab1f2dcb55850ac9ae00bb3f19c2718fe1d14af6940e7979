@@ -1,0 +1,29 @@
+{
+  "architecture": "amd64",
+  "os": "linux",
+  "config": {
+    "User": "",
+    "Env": [
+      "PATH=/usr/local/bin:/usr/bin:/bin"
+    ],
+    "Cmd": [
+      "python",
+      "app.py"
+    ]
+  },
+  "rootfs": {
+    "type": "layers",
+    "diff_ids": [
+      "sha256:f030941edbb4882aa4b95deafe339e76d68ca4901e49314a66b819b6b4eea7f1",
+      "sha256:3e2842e042fc8c85d8419c212ea397e79882bcbb2ac122881c2ddf4e2f45cdbf"
+    ]
+  },
+  "history": [
+    {
+      "created_by": "demo layer 0: add app files"
+    },
+    {
+      "created_by": "demo layer 1: remove .env"
+    }
+  ]
+}
